@@ -21,7 +21,7 @@ namespace game
 
         public MidleGame()
         {
-            World = new World();
+            World = new World(10, 10);
         }
 
         public World World;

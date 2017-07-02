@@ -7,16 +7,16 @@ namespace game
     {
         public World(int colums, int rows)
         {
-            Tiles = new List<Tile>();
+            Tiles = new Tile[rows, colums];
             for(int column = 0; column < colums; column++)
             {
                 for (int row = 0; row < rows; row++)
                 {
-                    Tiles.Add(new Tile(column, row));
+                    Tiles[row, column] = new Tile(column, row);
                 }
             }
         }
 
-        public List<Tile> Tiles;
+        public Tile[,] Tiles;
     }
 }
